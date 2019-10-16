@@ -7,24 +7,12 @@ int main()
 		double n, a, b, x, s, d;
 		cout << "n=";
 		cin >> n;
-		cout << "a=" << "b=";
-		cin >> a >> b;
-		d = a;
-		while (a <= b)
-		{
-			cout << a;
-			a++;
-		}
-		cout << endl;
 		while (n > 0)
 		{
 			cout << "x=";
 			cin >> x;
-			if ((x >= d) && (x <= b))
-			{
-				s = ((sin(x) + tan(x) / (sqrt((1 / x) + 3 * x))));
-				n--;
-			}
+			s = ((sin(x) + tan(x) / (sqrt((1 / x) + 3 * x))));
+			n--;
 			cout << s << endl;
 		}
 	return 0;
