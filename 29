@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	int N, M;
+	cout << "Введите размер матрицы: ";
+	cin >> N >> M;
+	int** A = new int* [N];
+	for (int i = 0; i < N; i++)
+		A[i] = new int[M];
+
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < M; j++)
+			cin >> A[i][j];
+
+
+	cout << "Вот Ваша матрица:" << endl << endl;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < M; j++)
+			cout << A[i][j] << " ";
+		cout << endl;
+	}
+	int k=0,s=0;
+	double p;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < M; j++)
+		{
+			if ((A[i][j] % 2) != 0)
+			{
+				k += A[i][j];
+				s += 1;
+			}
+		}
+	}
+	cout << endl;
+	p = k / s;
+	cout << p;
+	for (int i = 0; i < N; i++)
+		delete[] A[i];
+	delete[] A;
+}
