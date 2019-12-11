@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, i, j,max;
+    cout << "Enter n\n";
+    cin >> n;
+    int** a = new int* [n];
+    for (i = 0; i < n; i++)
+        a[i] = new int[n];
+    cout << "Enter matrix\n";
+    for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+            cin >> a[i][j];
+    max = a[1][n - 1];
+    j = n - 1;
+    for (i = 0; i < n; i++)
+    {
+        if (max < a[i][j])
+            max = a[i][j];
+        j--;
+    }
+    cout << max;
+}
