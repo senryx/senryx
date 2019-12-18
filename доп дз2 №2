@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a,b,x;
+	cout << "Vvedite ku4u";
+	cin >> a;
+	while (a > 0)
+	{
+		cout << "ckol'ko vz9l kamney";
+		cin >> x;
+		a -= x;
+		cout << "v ku4e ostaloc'=" << a << endl;
+	}
+	cout << "Kamni kon4ilic'";
+}
