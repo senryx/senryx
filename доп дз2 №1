@@ -1,35 +1,12 @@
-#include <iostream>
 
-#include<iomanip>
-
-#include<cmath>
-
-using namespace std;
-
-int main ( )
-
-{
-
-int a,b,c;
-
-cout<<fixed<<setprecision(6);
-
-cout<<"a=";
-
-cin>>a;
-
-b=a/10;
-
-c=a%10;
-
-if ((b%2==0)&&(c%2==0))
-
-cout<<"oshibka";
-
-else
-
-cout<<a;
-
-return 0;
-
+#include <iostream> 
+#include<iomanip> 
+#include<cmath> 
+using namespace std; 
+int main ( ) 
+{ 
+int i; 
+for (i=10; i<=99; i++) 
+ if (((i%10)%2!=0)&&((i/10)%2!=0)) 
+cout « i; 
 }
