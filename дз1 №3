@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+	using namespace std;
+	int main()
+
+	{
+		char x;
+		cout << "x=";
+		cin >> x;
+		switch (x)
+		{
+		case '1':cout << "bol'shoy"; break;
+		case '2':cout << "ykazatelniy"; break;
+		case '3':cout << "sredney"; break;
+		case '4':cout << "bezim9nec"; break;
+		case '5':cout << "mizinec"; break;
+		default:cout << "ohibka";
+		}
+		return 0;
+	}
+
+}
