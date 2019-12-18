@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int ** creat(int&n, int&m)
+{
+ cout « "n= "; cin » n;
+ cout « "m= "; cin » m;
+ int **mas=new int*[n];
+ for (int i=0; i<n; ++i)
+ mas[i]= new int[m];
+ for (int i=0; i<n; ++i)
+ for (int j=0; j<m; ++j)
+ {
+ cout « "a[" « i « "][" « j « "]=";
+ cin » mas[i][j];
+ }
+ return mas;
+}
+
+int main ()
+{ int n,m;
+int **a=creat(n,m);
+for (int i=1; i<n; i=i+2)
+ {cout « endl;
+ for (int j=0; j<m; ++j)
+ cout « a[i][j] « " ";}
+for (int i=0; i<n; i=i+2)
+ {
+ cout « endl;
+ for (int j=0; j<m; ++j)
+ cout « a[i][j] « " ";}
+for (int i=0; i<n; ++i)
+delete [] a[i];
+delete []a;
+return 0;
+}
