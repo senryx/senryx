@@ -18,14 +18,14 @@ int main() {
 		for (int j = 0; j < n; j++)
 			cout << setw(3) << a[i][j];
 		cout << endl;
-	}	
+	}
 	cout << endl;
 	int* A = new int[n];
 	for (int i = 0; i < n; i++)
 	{
 		A[i] = 1;
 	}
-	cout << 'k1=';
+	cout << "k1=";
 	cin >> k1;
 	cout << "k2=";
 	cin >> k2;
@@ -33,12 +33,12 @@ int main() {
 	{
 		for (int i = k1; i <= k2; i++)
 		{
-			A[j] *= a[j][i];
+			A[i] *= a[j][i];
 		}
 	}
-		for (int i = 0; i < n; i++)
-		{
-			cout << "Product of " << i << "th column:" << A[i] << '\n';
-		}
+	for (int i = 0; i < n; i++)
+	{
+		cout << A[i] << " ";
+	}
 	return 0;
 }
